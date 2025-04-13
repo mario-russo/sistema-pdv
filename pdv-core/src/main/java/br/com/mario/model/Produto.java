@@ -15,7 +15,7 @@ public class Produto {
         this.quantidadeEstoque = quantidadeEstoque;
     }
 
-    public Produto(){
+    public Produto() {
 
     }
 
@@ -82,7 +82,5 @@ public class Produto {
         return "Produto [codigo=" + codigo + ", nome=" + nome + ", descricao=" + descricao + ", preco=" + preco
                 + ", quantidadeEstoque=" + quantidadeEstoque + "]";
     }
-    
-    
-    
+
 }
