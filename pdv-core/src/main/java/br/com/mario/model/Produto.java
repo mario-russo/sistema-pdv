@@ -7,10 +7,10 @@ public class Produto {
     private int codigo;
     private String nome;
     private String descricao;
-    private Long preco;
+    private Double preco;
     private int quantidadeEstoque;
 
-    public Produto(String nome, String descricao, Long preco, int quantidadeEstoque) {
+    public Produto(String nome, String descricao, Double preco, int quantidadeEstoque) {
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
@@ -41,7 +41,7 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public void setPreco(Long preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
@@ -57,7 +57,7 @@ public class Produto {
         return descricao;
     }
 
-    public Long getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
