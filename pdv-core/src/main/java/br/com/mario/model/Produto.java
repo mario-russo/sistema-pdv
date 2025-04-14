@@ -1,5 +1,7 @@
 package br.com.mario.model;
 
+import br.com.mario.model.util.EstoqueException;
+
 public class Produto {
 
     private int codigo;
@@ -17,6 +19,14 @@ public class Produto {
 
     public Produto() {
 
+    }
+
+    void atualizaEStoque(int quantidade){
+        if(quantidadeEstoque < quantidade ){
+            throw new EstoqueException("Estoque baixo para o produto" + nome);
+        }
+
+        quantidadeEstoque -= quantidade;
     }
 
     public int getCodigo() {
