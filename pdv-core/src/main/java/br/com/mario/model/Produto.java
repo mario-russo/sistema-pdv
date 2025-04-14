@@ -21,12 +21,12 @@ public class Produto {
 
     }
 
-    void atualizaEStoque(int quantidade){
-        if(quantidadeEstoque < quantidade ){
-            throw new EstoqueException("Estoque baixo para o produto" + nome);
+    public void atualizaEstoque(int quantidade){
+        if(this.quantidadeEstoque < quantidade ){
+            throw new EstoqueException("Estoque baixo para o produto " + nome);
         }
 
-        quantidadeEstoque -= quantidade;
+        this.quantidadeEstoque -= quantidade;
     }
 
     public int getCodigo() {
