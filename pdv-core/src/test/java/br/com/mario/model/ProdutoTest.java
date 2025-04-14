@@ -26,14 +26,14 @@ public class ProdutoTest {
         produto.setQuantidadeEstoque(5);
 
         assertThrows(EstoqueException.class, () -> {
-            produto.atualizaEStoque(6);
+            produto.atualizaEstoque(6);
         });
     }
 
     @Test
     void atualiza_estoque() {
         int valorEsperado = 1;
-        produto.atualizaEStoque(4);
+        produto.atualizaEstoque(4);
         assertEquals(valorEsperado, produto.getQuantidadeEstoque());
     }
 }
