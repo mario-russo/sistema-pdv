@@ -1,15 +1,19 @@
 package br.com.mario.dataBese;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class SQLiteConnection {
-
-    private final static String url = "jdbc:sqlite:database/pdv.db";
-
+    
+    
+    
     public static Connection getConnection() throws SQLException {
+        Path caminhoBanco = Paths.get("database", "pdv.db");
+        String url = "jdbc:sqlite:" + caminhoBanco;
         return DriverManager.getConnection(url);
     }
 
