@@ -4,13 +4,18 @@ import br.com.mario.model.util.EstoqueException;
 
 public class Produto {
 
+    private int id;
     private int codigo;
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
     private String nome;
     private String descricao;
-    private Double preco;
+    private double preco;
     private int quantidadeEstoque;
 
-    public Produto(String nome, String descricao, Double preco, int quantidadeEstoque) {
+    public Produto(String nome, String descricao, double preco, int quantidadeEstoque) {
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
@@ -21,12 +26,20 @@ public class Produto {
 
     }
 
-    public void atualizaEstoque(int quantidade){
-        if(this.quantidadeEstoque < quantidade ){
+    public void atualizaEstoque(int quantidade) {
+        if (this.quantidadeEstoque < quantidade) {
             throw new EstoqueException("Estoque baixo para o produto " + nome);
         }
 
         this.quantidadeEstoque -= quantidade;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getCodigo() {
@@ -41,7 +54,7 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public void setPreco(Double preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 
@@ -57,7 +70,7 @@ public class Produto {
         return descricao;
     }
 
-    public Double getPreco() {
+    public double getPreco() {
         return preco;
     }
 
@@ -89,7 +102,7 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "Produto [codigo=" + codigo + ", nome=" + nome + ", descricao=" + descricao + ", preco=" + preco
+        return "Produto [id = "+ id+", codigo=" + codigo + ", nome=" + nome + ", descricao=" + descricao + ", preco=" + preco
                 + ", quantidadeEstoque=" + quantidadeEstoque + "]";
     }
 
