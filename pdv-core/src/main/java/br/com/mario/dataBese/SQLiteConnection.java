@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class SQLiteConnection {
 
-    private final static String url = "jdbc:sqlite:pdv.db";
+    private final static String url = "jdbc:sqlite:database/pdv.db";
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(url);
