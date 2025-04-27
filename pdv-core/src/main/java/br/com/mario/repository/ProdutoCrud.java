@@ -1,6 +1,6 @@
 package br.com.mario.repository;
 
-import br.com.mario.dataBese.SQLiteConnection;
+import br.com.mario.database.SQLiteConnection;
 import br.com.mario.model.Produto;
 import br.com.mario.repository.contract.ListRepository;
 import br.com.mario.repository.contract.Salve;
