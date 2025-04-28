@@ -4,11 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
 
 import br.com.mario.dataBese.SQLiteConnection;
 import br.com.mario.model.Usuario;
-import br.com.mario.repository.contract.ListRepository;
+
 import br.com.mario.repository.contract.Salve;
 
 public class UsuarioCrud implements Salve<Usuario> {
