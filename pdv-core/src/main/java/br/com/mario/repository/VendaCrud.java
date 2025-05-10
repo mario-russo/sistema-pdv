@@ -18,8 +18,7 @@ public class VendaCrud implements Salve<Venda>{
             statement.setDouble(1, venda.getValorTotal());
             statement.setString(2, venda.getFormaPagamento());
             statement.setLong(3,venda.getId());
-
-            
+ 
             statement.executeUpdate();
             return venda;
         } catch (Exception e) {
