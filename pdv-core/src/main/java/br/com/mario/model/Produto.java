@@ -6,24 +6,23 @@ public class Produto {
 
     private int id;
     private int codigo;
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
-
     private String nome;
     private String descricao;
     private double preco;
     private int quantidadeEstoque;
-
+    
     public Produto(String nome, String descricao, double preco, int quantidadeEstoque) {
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
         this.quantidadeEstoque = quantidadeEstoque;
     }
-
+    
     public Produto() {
-
+        
+    }
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public void atualizaEstoque(int quantidade) {
